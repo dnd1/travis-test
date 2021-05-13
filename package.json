@@ -1,0 +1,19 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnd1/travis-test.git"
+  },
+  "author": "Daniel Rodriguez del Villar <daniel@dnd1.com> (http://dnd1.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dnd1/travis-test/issues"
+  },
+  "homepage": "https://github.com/dnd1/travis-test#readme"
+}
