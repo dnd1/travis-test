@@ -8,7 +8,7 @@ before_install:
   - 'unzip awscli-bundle.zip'
   - './awscli-bundle/install -b ~/bin/aws'
   # - 'export PATH=~/bin:$PATH'
-  - 'aws configure'
+  #- 'aws configure'
   # - wget https://github.com/digitalocean/doctl/releases/download/v1.54.0/doctl-1.54.0-linux-amd64.tar.gz
   # - tar xf doctl-1.54.0-linux-amd64.tar.gz
   # - sudo mv doctl /usr/local/bin
