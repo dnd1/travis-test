@@ -1,7 +1,9 @@
-REPO_NAME=travis-test
-IMAGE_TAG=latest
 
-REPO_URL="208369778572.dkr.ecr.us-east-1.amazonaws.com"
+echo "push to registry"
+# REPO_NAME="travis-test"
+# IMAGE_TAG="latest"
+
+# REPO_URL="208369778572.dkr.ecr.us-east-1.amazonaws.com"
 
 # IMPORTANT
 # In order to login to our ECR repo, the following env vars have to be set
