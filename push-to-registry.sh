@@ -9,11 +9,13 @@ REPO_URL="208369778572.dkr.ecr.us-east-1.amazonaws.com"
 # AWS_ACCESS_KEY_ID
 # AWS_SECRET_ACCESS_KEY
 echo "logging in to ecr and docker"
-aws ecr get-login-password --region us-east-1| docker login --username AWS --password-stdin $REPO_URL
+echo $AWS_ACCESS_KEY_ID
+echo $AWS_SECRET_ACCESS_KEY
+# aws ecr get-login-password --region us-east-1| docker login --username AWS --password-stdin $REPO_URL
 
-# this builds, tags and pushes the branch/tag.
-echo "running docker build"
-docker build -t ${REPO_NAME} . 
-docker tag "${IMAGE_NAME}" "${REPO_URL}/${IMAGE_NAME}:${IMAGE_TAG}"
-docker tag "${REPO_NAME}:${IMAGE_TAG}" "${REPO_URL}/${REPO_NAME}:${IMAGE_TAG}"
-docker push "${REPO_URL}/${REPO_NAME}:${IMAGE_TAG}"
+# # this builds, tags and pushes the branch/tag.
+# echo "running docker build"
+# docker build -t ${REPO_NAME} . 
+# docker tag "${IMAGE_NAME}" "${REPO_URL}/${IMAGE_NAME}:${IMAGE_TAG}"
+# docker tag "${REPO_NAME}:${IMAGE_TAG}" "${REPO_URL}/${REPO_NAME}:${IMAGE_TAG}"
+# docker push "${REPO_URL}/${REPO_NAME}:${IMAGE_TAG}"
