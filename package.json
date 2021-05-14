@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+	"start": "node index.js",
+    "test": "echo \"This step runs tests, none for now...\" && exit 0"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/dnd1/travis-test/issues"
   },
-  "homepage": "https://github.com/dnd1/travis-test#readme"
+  "homepage": "https://github.com/dnd1/travis-test#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

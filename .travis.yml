@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - 16
+services:
+  - docker
+before_install:
+  - wget https://github.com/digitalocean/doctl/releases/download/v1.54.0/doctl-1.54.0-linux-amd64.tar.gz
+  - tar xf doctl-1.54.0-linux-amd64.tar.gz
+  - sudo mv doctl /usr/local/bin
+branches:
+  only:
+    - master
+deploy:
+  provider: script
+  script: bash ./push-to-registry.sh
+  on:
+    branch: master
