@@ -14,8 +14,8 @@ echo "logging in to ecr and docker"
 aws ecr get-login-password --region us-east-1| docker login --username AWS --password-stdin $REPO_URL
 
 # # this builds, tags and pushes the branch/tag.
-echo "running docker build"
-docker build -t ${REPO_NAME} . 
+echo "running docker build: ${REPO_NAME}:latest"
+docker build -t "${REPO_NAME}:latest" . 
 
 echo "tagging image as: ${REPO_URL}/${REPO_NAME}:latest"
 docker tag "${REPO_NAME}:latest" "${REPO_URL}/${REPO_NAME}:latest"
