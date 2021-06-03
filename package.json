@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-	"start": "node index.js",
-    "test": "echo \"This step runs tests, none for now...\" && exit 0"
+    "start": "node index.js",
+    "test": "echo \"This step runs tests, none for now...\" && exit 0",
+    "build": "zip -r function.zip index.js node_modules/"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,6 @@
   },
   "homepage": "https://github.com/dnd1/travis-test#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "funny-log": "^0.0.9"
   }
 }

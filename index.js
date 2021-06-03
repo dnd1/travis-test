@@ -1,14 +1,12 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const FunnyLogger = require('funny-log')
 
-app.get('/', (req, res) => {
-  res.send(`<div style="height:100%; width:100%; display:flex; justify-content:center; align-items:center;">
-	<h1>Hello World!</h1>
-  </div>`)
-})
+exports.handler = async function (event, context) {
+  var logger = new FunnyLogger()
+  logger.haha('Hello World!') //☜(ﾟヮﾟ☜) Hello World!
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
-
+  console.log('Hello Github!!!')
+  console.log('ENVIRONMENT VARIABLES\n' + JSON.stringify(process.env, null, 2))
+  console.log('EVENT\n' + JSON.stringify(event, null, 2))
+  console.log('Bye Bye Cruel World!!!')
+  return context.logStreamName
+}

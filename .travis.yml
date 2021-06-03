@@ -1,22 +1,7 @@
-language: node_js
-node_js:
-  - 16
-services:
-  - docker
-before_install:
-  - 'curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"'
-  - 'unzip awscli-bundle.zip'
-  - './awscli-bundle/install -b ~/bin/aws'
-  # - 'export PATH=~/bin:$PATH'
-  #- 'aws configure'
-  # - wget https://github.com/digitalocean/doctl/releases/download/v1.54.0/doctl-1.54.0-linux-amd64.tar.gz
-  # - tar xf doctl-1.54.0-linux-amd64.tar.gz
-  # - sudo mv doctl /usr/local/bin
-branches:
-  only:
-    - master
 deploy:
-  provider: script
-  script: bash ./push-to-registry.sh
-  on:
-    branch: master
+  provider: lambda
+  function_name: "my-test-function-github-lambda"
+  region: "us-east-1"
+  role: "arn:aws:iam::208369778572:role/lambda-ex"
+  runtime: "nodejs12.x"
+  handler_name: "handler"
