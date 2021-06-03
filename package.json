@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/dnd1/travis-test#readme",
   "dependencies": {
-    "funny-log": "^0.0.9"
+    "sillyname": "^0.1.0"
   }
 }
