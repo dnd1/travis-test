@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "test": "echo \"This step runs tests, none for now...\" && exit 0",
-    "build": "zip -r function.zip index.js node_modules/"
+    "build": "zip -r function.zip index.js node_modules/."
   },
   "repository": {
     "type": "git",
