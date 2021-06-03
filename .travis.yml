@@ -21,7 +21,7 @@ script:
   - npm run build
 deploy:
   provider: lambda
-  function_name: "my-test-function-github-lambda"
+  function_name: "my-test-function-travis-lambda"
   region: "us-east-1"
   role: "arn:aws:iam::208369778572:role/lambda-ex"
   runtime: "nodejs12.x"
