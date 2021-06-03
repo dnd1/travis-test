@@ -6,7 +6,7 @@ install:
 script:
   - npm run build
   - cat index.js
-  - ls -r node_modules/funny-log
+  - ls -ar node_modules/funny-log
 deploy:
   provider: lambda
   function_name: "my-test-function-travis-lambda"
