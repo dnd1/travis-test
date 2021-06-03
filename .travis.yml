@@ -2,9 +2,11 @@ language: node_js
 node_js:
   - 16
 install:
-  - npm install
+  - npm i
 script:
   - npm run build
+  - cat index.js
+  - ls -r node_modules
 deploy:
   provider: lambda
   function_name: "my-test-function-travis-lambda"
